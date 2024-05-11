@@ -6,7 +6,7 @@ ARG TOKEN=${TOKEN}
 ARG SUBDOMAIN_HOST=${SUBDOMAIN_HOST}
 
 ADD entrypoint.sh /entrypoint.sh
-ADD server.toml /server.ini
+ADD server.toml /server.toml
 
 RUN addgroup -S frp \
  && adduser -D -S -h /var/frp -s /sbin/nologin -G frp frp \
@@ -17,7 +17,7 @@ RUN addgroup -S frp \
  && mv frp_*_linux_amd64 /frp \
  && chown -R frp:frp /frp \
  && mv /entrypoint.sh /frp/ \
- && mv /server.ini /frp/
+ && mv /server.toml /frp/
 
 
 USER frp
