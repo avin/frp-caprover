@@ -5,16 +5,17 @@
 ## Configure
 
 Add Environmental Variables
+
 ```
 TOKEN=secretpassword
 SUBDOMAIN_HOST=frp.server.com
 ```
 
-Add Port Mapping  
+Add Port Mapping
+
 ```
 Server Port : 37000 | Container Port : 7000
 ```
-
 
 ## Client
 
