@@ -1,5 +1,7 @@
 # frp-caprover
 
+[FRP](https://github.com/fatedier/frp) app configuration for [CapRover](https://caprover.com/)
+
 ## Configure
 
 Add Environmental Variables
@@ -7,6 +9,12 @@ Add Environmental Variables
 TOKEN=secretpassword
 SUBDOMAIN_HOST=frp.server.com
 ```
+
+Add Port Mapping  
+```
+Server Port : 37000 | Container Port : 7000
+```
+
 
 ## Client
 
