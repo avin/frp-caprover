@@ -1,4 +1,4 @@
-# frp-caprover
+# FRP for CapRover
 
 [FRP](https://github.com/fatedier/frp) app configuration for [CapRover](https://caprover.com/)
 
@@ -6,10 +6,9 @@
 
 Add Environmental Variables
 
-```
-TOKEN=secretpassword
-SUBDOMAIN_HOST=frp.server.com
-```
+* `TOKEN` = `secretpassword` (use same token in client.toml config)
+* `SUBDOMAIN_HOST` = `frp.server.com` (replace with your domain)
+
 
 Add Port Mapping
 
