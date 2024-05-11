@@ -2,7 +2,7 @@
 
 [FRP](https://github.com/fatedier/frp) app configuration for [CapRover](https://caprover.com/)
 
-## Configure
+## Configure app
 
 Add Environmental Variables
 
@@ -17,7 +17,14 @@ Add Port Mapping
 Server Port : 37000 | Container Port : 7000
 ```
 
-## Client
+Add domains
+
+```
+8888.frp.server.com
+static.frp.server.com
+```
+
+## Client config
 
 `client.toml`
 
@@ -27,28 +34,26 @@ serverPort = 37000
 auth.method = "token"
 auth.token = "secretpassword"
 
+# ---- https://8888.frp.server.com -> https://127.0.0.1:8888 ----
+
 [[proxies]]
-name = "fw8888"
+name = "web8888"
 type = "http"
 subdomain = "8888"
 [proxies.plugin]
 type = "http2https"
 localAddr = "127.0.0.1:8888"
 
-[[proxies]]
-name = "fw8080"
-type = "http"
-subdomain = "8080"
-[proxies.plugin]
-type = "http2https"
-localAddr = "127.0.0.1:8080"
+# ---- https://static.frp.server.com -> share file from C:\\www ----
 
 [[proxies]]
-name = "fw3000"
+name = "static"
 type = "http"
-subdomain = "3000"
+subdomain = "static"
 [proxies.plugin]
-type = "http2https"
-localAddr = "127.0.0.1:3000"
+type = "static_file"
+localPath = "C:\\www"
+httpUser = "abc"
+httpPassword = "abc"
 
 ```
