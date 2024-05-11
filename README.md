@@ -28,7 +28,7 @@ auth.method = "token"
 auth.token = "secretpassword"
 
 [[proxies]]
-name = "test8888"
+name = "fw8888"
 type = "http"
 subdomain = "8888"
 [proxies.plugin]
@@ -36,11 +36,19 @@ type = "http2https"
 localAddr = "127.0.0.1:8888"
 
 [[proxies]]
-name = "test8080"
+name = "fw8080"
 type = "http"
 subdomain = "8080"
 [proxies.plugin]
 type = "http2https"
 localAddr = "127.0.0.1:8080"
+
+[[proxies]]
+name = "fw3000"
+type = "http"
+subdomain = "3000"
+[proxies.plugin]
+type = "http2https"
+localAddr = "127.0.0.1:3000"
 
 ```
