@@ -1,8 +1,8 @@
 bindAddr = "0.0.0.0"
 bindPort = 7000
 
-authenticationMethod = "token"
-token = "#TOKEN#"
+auth.method = "token"
+auth.token = "#TOKEN#"
 
 subdomainHost = "#SUBDOMAIN_HOST#"
 
